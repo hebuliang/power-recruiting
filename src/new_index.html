@@ -1,107 +1,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>PowerRecruiting</title>
-	<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
-	<link type="text/css" href="css/power-recruiting.css" rel="stylesheet" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>PowerRecruiting</title>
+  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link type="text/css" href="css/power-recruiting.css" rel="stylesheet"/>
 
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/underscore-min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>	
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body id="power-recruiting">
-	<header class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="row">
-				<h3>PowerRecruiting System</h3>
-				<div class="nav-btn"><button type="button" class="btn btn-primary">导入数据</button></div>
-				<div class="nav-btn" title="导入数据后才能保存"><button type="button" class="btn btn-success" disabled>保存</button></div>
-				<div class="nav-btn" title="请至少选中2名候选人才能进行比较"><button type="button" class="btn btn-warning" disabled>比较</button></div>
-			</div>
-		</div>
-	</header>
+<header class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="row">
+      <h3>PowerRecruiting System</h3>
 
-	<article class="container-fluid">
-		<div class="row">
-			<aside class="sidebar">
-				<div class="resume-panel">
-					<h5>个人信息</h5>
-					<!-- Basic Informations -->
-					<div class="basic-info">
-						<div class="avatar"><img src=""></div>
-						<div class="basic">
-							<div>
-							  <div class="form-group">
-							   <input type="text" class="form-control" placeholder="姓名">
-							   <select class="form-control">
-							   	<option value="male" default>男</option>
-							   	<option value="female">女</option>
-							   </select>
+      <div class="nav-btn">
+        <button type="button" class="btn btn-primary">导入数据</button>
+      </div>
+      <div class="nav-btn" title="导入数据后才能保存">
+        <button type="button" class="btn btn-success" disabled>保存</button>
+      </div>
+      <div class="nav-btn" title="请至少选中2名候选人才能进行比较">
+        <button type="button" class="btn btn-warning" disabled>比较</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-							   <input type="text" class="form-control" placeholder="学校">
-							  </div>
-						  </div>
-						</div>
-					</div>
+<article class="container-fluid">
+  <div class="row">
+    <aside class="sidebar">
+      <div class="resume-panel">
+        <h5>个人信息</h5>
+        <!-- Basic Informations -->
+        <div class="basic-info">
+          <div class="avatar"><img src=""></div>
+          <div class="basic">
+            <div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="姓名">
+                <select class="form-control">
+                  <option value="male" default>男</option>
+                  <option value="female">女</option>
+                </select>
 
-					<!-- Score and Comments -->	
-					<div class="form-horizontal advance-info">
-					  <div class="form-group row">
-					   <input type="text" class="form-control col-xs-2" placeholder="Logic">
-					   <input type="text" class="form-control col-xs-2" placeholder="Wonderlic">
-					   <input type="text" class="form-control col-xs-2" placeholder="综合">
-					  </div>
-					  <div class="form-group">
-					   <textarea class="form-control" placeholder="评价"></textarea>
-					  </div>
-					</div>
-				</div>
+                <input type="text" class="form-control" placeholder="学校">
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<!-- Temporary storage Panel -->
-				<div class="hold-panel" >
-					<h5>临时操作区</h5>
-					<div class="clipboard">
-						<i class="clip"></i>
-						<div class="board">
-							<ul><li>此处可以临时保存候选人卡片</li><li>操作时直接拖拽卡片至此即可</li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-						</div>
-						<div class="shadow-board"></div>
-					</div>
-				</div>
-			</aside>
+        <!-- Score and Comments -->
+        <div class="form-horizontal advance-info">
+          <div class="form-group row">
+            <input type="text" class="form-control col-xs-2" placeholder="Logic">
+            <input type="text" class="form-control col-xs-2" placeholder="Wonderlic">
+            <input type="text" class="form-control col-xs-2" placeholder="综合">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" placeholder="评价"></textarea>
+          </div>
+        </div>
+      </div>
 
-			<div class="main">
-				<!-- group rank-->
-				<div class="group-panel"></div>
+      <!-- Temporary storage Panel -->
+      <div class="hold-panel">
+        <h5>临时操作区</h5>
 
-				
-				<div class="panel-group" id="rank-panel">
-				  <!-- overall rank -->
-				  <div class="panel panel-default overall-rank">
-				    <div class="panel-heading">
-				      <h4 class="panel-title">
-				        <a data-toggle="collapse" data-parent="#all-groups" href="#overall-rank">
-				          总排名
-				        </a>
-				      </h4>
-				    </div>
-				    <div id="overall-rank" class="panel-collapse collapse in">
-				      <div class="panel-body">
-				      	<div class="grade grade1 ui-droppable"><div>1</div></div>
-						<div class="grade grade2-A ui-droppable"><div>2-A</div></div>
-						<div class="grade grade2-B ui-droppable"><div>2-B</div></div>
-						<div class="grade grade2-C ui-droppable"><div>2-C</div></div>
-						<div class="grade grade3 ui-droppable"><div>3</div></div>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-			</div>
-		</div>
+        <div class="clipboard">
+          <i class="clip"></i>
 
-	</article>
-	<footer></footer>
+          <div class="board">
+            <ul>
+              <li>此处可以临时保存候选人卡片</li>
+              <li>操作时直接拖拽卡片至此即可</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="shadow-board"></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <!-- group rank-->
+      <div class="group-panel col-md-6" id="group-rank-panel">
+        <div class="panel panel-default overall-rank">
+          <div class="panel-heading ">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#all-groups" href="#group-rank">
+                小组排名
+              </a>
+            </h4>
+          </div>
+          <div id="group-rank" class="panel-collapse collapse in">
+            <nav class="group-list">
+              <ul>
+                <li class="active"><a href="javascript:;">第一组</a></li>
+                <li><a href="javascript:;">第二组</a></li>
+                <li><a href="javascript:;">第三组</a></li>
+                <li><a href="javascript:;">第四组</a></li>
+                <li><a href="javascript:;">第五组</a></li>
+                <li><a href="javascript:;">第六组</a></li>
+                <li><a href="javascript:;">第七组</a></li>
+                <li><a href="javascript:;">第八组</a></li>
+                <li><a href="javascript:;">第九组</a></li>
+                <li><a href="javascript:;">第十组</a></li>
+                <li><a href="javascript:;">第十一组</a></li>
+                <li><a href="javascript:;">第十二组</a></li>
+              </ul>
+            </nav>
+            <div class="panel-body">
+              <div class="grade group-grade1 ui-droppable">
+                <div>1</div>
+              </div>
+              <div class="grade group-grade2 ui-droppable">
+                <div>2</div>
+              </div>
+              <div class="grade group-grade3 ui-droppable">
+                <div>3</div>
+              </div>
+              <div class="grade group-pass ui-droppable">
+                <div>Pass</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="panel-group col-md-6" id="rank-panel">
+        <!-- overall rank -->
+        <div class="panel panel-default overall-rank">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#all-groups" href="#overall-rank">
+                总排名
+              </a>
+            </h4>
+          </div>
+          <div id="overall-rank" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <div class="grade grade1 ui-droppable">
+                <div>1</div>
+              </div>
+              <div class="grade grade2-A ui-droppable">
+                <div>2-A</div>
+              </div>
+              <div class="grade grade2-B ui-droppable">
+                <div>2-B</div>
+              </div>
+              <div class="grade grade2-C ui-droppable">
+                <div>2-C</div>
+              </div>
+              <div class="grade grade3 ui-droppable">
+                <div>3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</article>
+<footer></footer>
 </body>
 </html>
 
