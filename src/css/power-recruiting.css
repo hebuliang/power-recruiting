@@ -174,6 +174,9 @@
     text-align: center;
     border-bottom: solid 1px #ddd;
 }
+.group-list ul li:last-child {
+    border: none;
+}
 .group-list ul li:hover {
     background: #3276b1;
 }
@@ -210,13 +213,16 @@
 	border-bottom: none;
 }
 .overall-rank .grade > div {
-	position: absolute;
-	z-index: 0;
-	color: rgba(0, 0, 0, 0.4);
-	width: 90%;
-	font-weight: bold;
-	text-align: center;
-	font-size: 18px;
-	bottom: 8px;
+    position: absolute;
+    z-index: 0;
+    font-weight: bold;
+    font-size: 16px;
+    top: 12px;
+    background: #E6CB61;
+    color: white;
+    right: -15px;
+    width: 40px;
+    text-align: center;
+    line-height: 80px;
 }
 /* main panel end */
