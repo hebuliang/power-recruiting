@@ -142,6 +142,8 @@
 	padding: 0px;
 	padding-right: 20px;
 	margin-left: 320px;
+    overflow: hidden;
+    position: relative;
 }
 #rank-panel {
 	z-index: 0;
@@ -150,6 +152,11 @@
 
 #group-rank-panel {
     margin-top: 8px;
+    margin-right: 12px;
+    padding: 0;
+}
+#rank-panel {
+    padding: 0;
 }
 #group-rank-panel .overall-rank {
     position: relative;
@@ -157,22 +164,19 @@
 
 /* group panel start*/
 .group-list {
-    width: 95px;
-    position: absolute;
-    top: 38px;
-    left: 0;
-    bottom: 0;
+    width: 80px;
     color: white;
-    border-right: 1px solid #ddd;
+    padding: 0;
+    margin-top: 46px;
 }
 .group-list ul {
     list-style: none;
     padding-left: 0;
+    background: #f5f5f5;
 }
 .group-list ul li  {
     line-height: 40px;
     text-align: center;
-    border-bottom: solid 1px #ddd;
 }
 .group-list ul li:last-child {
     border: none;
@@ -193,11 +197,30 @@
     color: #a4a4a4;
     text-decoration: none;
 }
-#group-rank {
-    margin-left: 95px;
+
+.group-panel .grade.group-pass {
+    height: 245px;
 }
 /* group panel end*/
 
+
+/*temp area*/
+.temp-area {
+    position: fixed;
+    color: white;
+    bottom: 0;
+    width: 100%;
+}
+.temp-area .temp-title {
+    width: 360px;
+    margin: 0 auto;
+    line-height: 43px;
+    background: #3276b1;
+    display: block;
+    text-align: center;
+
+}
+/*temp area end*/
 .overall-rank .panel-body {
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -213,16 +236,6 @@
 	border-bottom: none;
 }
 .overall-rank .grade > div {
-    position: absolute;
-    z-index: 0;
-    font-weight: bold;
-    font-size: 16px;
-    top: 12px;
-    background: #E6CB61;
-    color: white;
-    right: -15px;
-    width: 40px;
-    text-align: center;
-    line-height: 80px;
+    font-size: 20px;
 }
 /* main panel end */
