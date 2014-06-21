@@ -12,7 +12,7 @@
 #power-recruiting .navbar-inverse h3 {
 	color: #888;
 	margin: 15px;
-	width: 75%;
+	width: 80%;
 	display: inline-block;
 	background: -webkit-linear-gradient(top, rgba(33, 18, 112, 1) 0%,rgba(12, 67, 138, 1) 60%,rgba(87, 147, 224, 1) 65%,rgba(174,188,191,1) 100%);
 	-webkit-background-clip: text;
@@ -142,17 +142,15 @@
 	padding: 0px;
 	padding-right: 20px;
 	margin-left: 320px;
-    overflow: hidden;
     position: relative;
 }
 #rank-panel {
 	z-index: 0;
-	margin: 7px 0 0 0;
+	margin: 8px 0 0 0;
 }
 
 #group-rank-panel {
-    margin-top: 8px;
-    margin-right: 12px;
+    margin: 8px 12px 10px 0;
     padding: 0;
 }
 #rank-panel {
@@ -165,7 +163,6 @@
 /* group panel start*/
 .group-list {
     width: 80px;
-    color: white;
     padding: 0;
     margin-top: 46px;
 }
@@ -177,29 +174,34 @@
 .group-list ul li  {
     line-height: 40px;
     text-align: center;
-}
-.group-list ul li:last-child {
-    border: none;
-}
-.group-list ul li:hover {
-    background: #3276b1;
+    border: 1px solid #e2e2e2;
+    border-top: none;
+    border-right: none;
 }
 .group-list ul li.active {
-    background: #3276b1;
-}
-.group-list ul li.active a {
-    color: white;
-}
-.group-list ul li:hover a {
-    color: white;
+	width: 85px;
+    position: relative;
+	right: 4px;
+	z-index: 100;
+	background: #FFF;
+	color: #000;
+	border-top: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+	border-radius: 8px 0 0 8px;
 }
 .group-list ul li a {
     color: #a4a4a4;
     text-decoration: none;
 }
+.group-list ul li.active a {
+	font-size: 18px;
+	color: #e47649;
+	padding: 5px 0;
+	display: block;
+}
 
 .group-panel .grade.group-pass {
-    height: 245px;
+    height: 237px;
 }
 /* group panel end*/
 
@@ -207,17 +209,20 @@
 /*temp area*/
 .temp-area {
     position: fixed;
-    color: white;
-    bottom: 0;
-    width: 100%;
+	right: 0px;
+	top: 60px;
+	cursor: pointer;
 }
 .temp-area .temp-title {
-    width: 360px;
-    margin: 0 auto;
-    line-height: 43px;
-    background: #3276b1;
-    display: block;
-    text-align: center;
+	color: #fff;
+    height: 200px;
+	background: #3276b1;
+	display: block;
+	text-align: center;
+	width: 27px;
+	line-height: 20px;
+	padding-top: 40px;
+	padding-left: 3px;
 
 }
 /*temp area end*/
