@@ -37,6 +37,13 @@
 #power-recruiting .sidebar .resume-panel {
 	border-bottom: 2px dotted #D8D8D8;
 }
+#power-recruiting .sidebar .resume-panel h5 {
+	margin-top: 5px;
+}
+/* TODO change position */
+#power-recruiting .sidebar .hold-panel {
+	display: none;
+}
 #power-recruiting .sidebar .basic-info {
 	overflow: hidden;
 	position: relative;
@@ -231,7 +238,7 @@
 	padding-bottom: 0px;
 }
 .overall-rank .grade {
-	height: 118px;
+	min-height: 120px;
 	display: inline-block;
 	width: 100%;
 	border-bottom: 1px dashed #888;	
@@ -242,5 +249,26 @@
 }
 .overall-rank .grade > div {
     font-size: 20px;
+    position: absolute;
 }
+
+.overall-rank .grade .card {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	background: -webkit-linear-gradient(top, #FACF24, #EBD97D);
+	background: -moz-linear-gradient(top, #FACF24, #EBD97D);
+	border: 1px solid #F0BE40;
+	border-radius: 5px;
+	padding: 5px;
+	box-shadow: 1px 1px 2px #AAA;
+	margin: 5px;
+	float: left;
+	position: relative;
+	left: 10px;
+	color: #444;
+}
+
+
 /* main panel end */
