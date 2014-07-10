@@ -67,7 +67,6 @@
 	width: 54px;
 	height: 30px;
 	line-height: 34px;
-	color: ;
 }
 #power-recruiting .sidebar .advance-info .row .form-control {
 	width: 88px;
@@ -259,6 +258,7 @@
 	text-align: center;
 	background: -webkit-linear-gradient(top, #FACF24, #EBD97D);
 	background: -moz-linear-gradient(top, #FACF24, #EBD97D);
+    background: linear-gradient(top, #FACF24, #EBD97D);
 	border: 1px solid #F0BE40;
 	border-radius: 5px;
 	padding: 5px;
@@ -268,6 +268,14 @@
 	position: relative;
 	left: 10px;
 	color: #444;
+    cursor: -webkit-grab;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.overall-rank .grade .card:active {
+    cursor: -webkit-grabbing;
 }
 
 
