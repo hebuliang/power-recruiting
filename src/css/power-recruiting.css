@@ -204,6 +204,7 @@
 	color: #e47649;
 	padding: 5px 0;
 	display: block;
+    pointer-events: none;
 }
 
 .group-panel .grade.group-pass {
