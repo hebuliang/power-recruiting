@@ -1,6 +1,9 @@
 #power-recruiting {
 	padding-top: 50px;
 }
+#power-recruiting header {
+	z-index: 1000010;
+}
 #power-recruiting .row .nav-btn {
 	display: inline-block;
 	margin-left: 10px;
@@ -58,6 +61,8 @@
 #power-recruiting .sidebar .basic-info .form-control {
 	height: 30px;
 	margin-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 20px;
 }
 #power-recruiting .sidebar .basic-info .basic {
 	float: right;
@@ -151,7 +156,6 @@
     position: relative;
 }
 #rank-panel {
-	z-index: 0;
 	margin: 8px 0 0 0;
 }
 
@@ -185,6 +189,8 @@
     border-right: none;
 }
 .group-list ul li.active {
+	margin-top: -1px;
+	padding: 5px;
 	width: 85px;
     position: relative;
 	right: 4px;
@@ -233,34 +239,36 @@
 
 }
 /*temp area end*/
-.overall-rank .panel-body {
+
+
+.rank .panel-body {
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
-.overall-rank .grade {
+.rank .grade {
 	min-height: 120px;
 	display: inline-block;
 	width: 100%;
 	border-bottom: 1px dashed #888;	
 	position: relative;
 }
-.overall-rank .grade:last-child {
+.rank .grade:last-child {
 	border-bottom: none;
 }
-.overall-rank .grade > div {
+.rank .grade > div {
     font-size: 20px;
     position: absolute;
 }
 
-.overall-rank .grade .card {
+.rank .grade .card {
 	display: inline-block;
 	width: 60px;
 	height: 60px;
 	text-align: center;
-	background: -webkit-linear-gradient(top, #FACF24, #EBD97D);
-	background: -moz-linear-gradient(top, #FACF24, #EBD97D);
-    background: linear-gradient(top, #FACF24, #EBD97D);
-	border: 1px solid #F0BE40;
+	background: -webkit-linear-gradient(top, #249AFA, #7DD8EB);
+	background: -moz-linear-gradient(top, #249AFA, #7DD8EB);
+    background: linear-gradient(top, #249AFA, #7DD8EB);
+	border: 1px solid #40AFF0;
 	border-radius: 5px;
 	padding: 5px;
 	box-shadow: 1px 1px 2px #AAA;
@@ -268,16 +276,50 @@
 	float: left;
 	position: relative;
 	left: 10px;
-	color: #444;
+	color: #fff;
     cursor: -webkit-grab;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    z-index: 100000;
 }
 
-.overall-rank .grade .card:active {
+.rank .grade .card.female {
+	background: -webkit-linear-gradient(top, #F77987, #F0A6DB);
+	background: -moz-linear-gradient(top, #F77987, #F0A6DB);
+    background: linear-gradient(top, #F77987, #F0A6DB);
+	border: 1px solid #F471BE;
+}
+
+.rank .grade .card:active {
     cursor: -webkit-grabbing;
 }
 
+.nav-tabs {
+	border-top: 1px solid #ddd;
+}
 
+.nav-tabs>li>a:hover {
+	border-color: transparent;
+}
+
+.nav>li>a:hover, 
+.nav>li>a:focus {
+	background-color: inherit;
+}
+
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:hover, 
+.nav-tabs>li.active>a:focus {
+	color: #e47649;
+	background-color: transparent;
+ 	border: none; 
+ 	border-bottom-color: transparent; 
+}
 /* main panel end */
+
+/* drag and drop */
+.undraggable {
+	opacity: 0.5;
+}
+/* drag and drop end*/

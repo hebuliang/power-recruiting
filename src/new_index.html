@@ -39,13 +39,13 @@
           <div class="basic">
             <div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="姓名">
-                <select class="form-control">
+                <input id="name" type="text" class="form-control" placeholder="姓名">
+                <select id="sex" class="form-control">
                   <option value="male" default>男</option>
                   <option value="female">女</option>
                 </select>
 
-                <input type="text" class="form-control" placeholder="学校">
+                <input id="school" type="text" class="form-control" placeholder="学校">
               </div>
             </div>
           </div>
@@ -54,12 +54,12 @@
         <!-- Score and Comments -->
         <div class="form-horizontal advance-info">
           <div class="form-group row">
-            <input type="text" class="form-control col-xs-2" placeholder="Logic">
-            <input type="text" class="form-control col-xs-2" placeholder="Wonderlic">
-            <input type="text" class="form-control col-xs-2" placeholder="综合">
+            <input id="logic" type="text" class="form-control col-xs-2" placeholder="Logic">
+            <input id="wonderlic" type="text" class="form-control col-xs-2" placeholder="Wonderlic">
+            <input id="total" type="text" class="form-control col-xs-2" placeholder="综合">
           </div>
           <div class="form-group">
-            <textarea class="form-control" placeholder="评价"></textarea>
+            <textarea id="comment" class="form-control" placeholder="评价"></textarea>
           </div>
         </div>
       </div>
@@ -92,23 +92,16 @@
 
     <div class="main">
       <nav class="group-list col-md-2">
-        <ul>
-          <li class="active"><a href="javascript:void(0);">第一组</a></li>
-          <li><a href="javascript:void(0);">第二组</a></li>
-          <li><a href="javascript:void(0);">第三组</a></li>
-          <li><a href="javascript:void(0);">第四组</a></li>
-          <li><a href="javascript:void(0);">第五组</a></li>
-          <li><a href="javascript:void(0);">第六组</a></li>
-          <li><a href="javascript:void(0);">第七组</a></li>
-          <li><a href="javascript:void(0);">第八组</a></li>
-          <li><a href="javascript:void(0);">第九组</a></li>
-          <li><a href="javascript:void(0);">第十组</a></li>
-          <li><a href="javascript:void(0);">第十一组</a></li>
-          <li><a href="javascript:void(0);">第十二组</a></li>
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#group1" data-toggle="tab">第一组</a></li>
+          <li><a href="#group2" data-toggle="tab">第二组</a></li>
+          <li><a href="#group3" data-toggle="tab">第三组</a></li>
+          <li><a href="#group4" data-toggle="tab">第四组</a></li>
+          <li><a href="#group5" data-toggle="tab">第五组</a></li>
         </ul>
       </nav>
       <!-- group rank-->
-      <div id="group-rank-panel" class="group-panel col-md-5 panel panel-default overall-rank">
+      <div id="group-rank-panel" class="group-panel col-md-5 panel panel-default group-rank rank">
         <div class="panel-heading ">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#all-groups" href="#group-rank">
@@ -116,32 +109,146 @@
             </a>
           </h4>
         </div>
-        <div id="group-rank" class="panel-collapse collapse in">
-          <div class="panel-body">
-            <div class="grade">
-              <div>1</div>
-              <span class="card candidate">颉嘉(80)</span>
-              <span class="card candidate">颉嘉(80)</span>
-              <span class="card candidate">秦连杰(80)</span>
-              <span class="card candidate">秦连杰(80)</span>
-              <span class="card candidate">秦连杰(80)</span>
-              <span class="card candidate">秦连杰(80)</span>
-            </div>
-            <div class="grade">
-              <div>2</div>
-            </div>
-            <div class="grade">
-              <div>3</div>
-            </div>
-            <div class="grade">
-              <div>Pass</div>
-            </div>
-          </div>
+        <div class="tab-content">
+	        <div id="group1" class="tab-pane in active">
+	          <div class="panel-body">
+	            <div class="grade" id="grade-1">
+	              <div>1</div>
+	              <span class="card candidate" data-user-id="4t5a2o1n5d7b">魏文彬(80)</span>
+	              <span class="card candidate female" data-user-id="571913o6n5du">姜欣(66)</span>
+	              <span class="card candidate" data-user-id="671913o6n5du">韩志伟(76)</span>
+	              <span class="card candidate" data-user-id="771913o6n5du">姬建刚(88)</span>
+	              <span class="card candidate" data-user-id="971913o6n5du">甄洪民(90)</span>
+	              <span class="card candidate" data-user-id="171913o6n5du">刘义强(67)</span>
+	              <span class="card candidate" data-user-id="271913o6n5du">杨峻峰(89)</span>
+	              <span class="card candidate" data-user-id="371913o6n5du">邓长叶(78)</span>
+	              <span class="card candidate" data-user-id="671913o6n5du">张金华(88)</span>
+	              <span class="card candidate" data-user-id="g71913o6n5du">祝树良(99)</span>
+	              <span class="card candidate" data-user-id="a71913o6n5du">张崇林(63)</span>
+	              <span class="card candidate female" data-user-id="b71913o6n5du">邓宝(73)</span>
+	            </div>
+	            <div class="grade" id="grade-2">
+	              <div>2</div>
+	            </div>
+	            <div class="grade" id="grade-3">
+	              <div>3</div>
+	            </div>
+	            <div class="grade" id="grade-pass">
+	              <div>Pass</div>
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="group2" class="tab-panel panel-collapse collapse">
+	          <div class="panel-body">
+	            <div class="grade" id="grade-1">
+	              <div>1</div>
+	              <span class="card candidate female" data-user-id="1t5a2o1n5d7b">张华立(81)</span>
+	              <span class="card candidate female" data-user-id="271913o6n5du">龙丹妮(62)</span>
+	              <span class="card candidate" data-user-id="371913o6n5du">刘海洋(65)</span>
+	              <span class="card candidate" data-user-id="471913o6n5du">王刚(70)</span>
+	              <span class="card candidate" data-user-id="571913o6n5du">李远志(80)</span>
+	              <span class="card candidate" data-user-id="671913o6n5du">江近涛(65)</span>
+	              <span class="card candidate female" data-user-id="771913o6n5du">丁熙晨(82)</span>
+	              <span class="card candidate female" data-user-id="871913o6n5du">陆贞如(71)</span>
+	              <span class="card candidate female" data-user-id="971913o6n5du">赵子戌(69)</span>
+	              <span class="card candidate female" data-user-id="071913o6n5du">童璐瑶(75)</span>
+	            </div>
+	            <div class="grade" id="grade-2">
+	              <div>2</div>
+	            </div>
+	            <div class="grade" id="grade-3">
+	              <div>3</div>
+	            </div>
+	            <div class="grade" id="grade-pass">
+	              <div>Pass</div>
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="group3" class="tab-panel panel-collapse collapse">
+	          <div class="panel-body">
+	            <div class="grade" id="grade-1">
+	              <div>1</div>
+	              <span class="card candidate" data-user-id="at5a2o1n5d7b">甘小宁(90)</span>
+	              <span class="card candidate" data-user-id="s71913o6n5du">康洪雷(63)</span>
+	              <span class="card candidate female" data-user-id="d71913o6n5du">丁晓宁(76)</span>
+	              <span class="card candidate female" data-user-id="f71913o6n5du">李佳艳(66)</span>
+	              <span class="card candidate" data-user-id="g71913o6n5du">黄新和(88)</span>
+	              <span class="card candidate" data-user-id="h71913o6n5du">全旭东(71)</span>
+	              <span class="card candidate" data-user-id="j71913o6n5du">冯态均(87)</span>
+	              <span class="card candidate female" data-user-id="k71913o6n5du">陈希(88)</span>
+	              <span class="card candidate" data-user-id="l71913o6n5du">贺乾坤(69)</span>
+	              <span class="card candidate female" data-user-id="o71913o6n5du">廉素(65)</span>
+	            </div>
+	            <div class="grade" id="grade-2">
+	              <div>2</div>
+	            </div>
+	            <div class="grade" id="grade-3">
+	              <div>3</div>
+	            </div>
+	            <div class="grade" id="grade-pass">
+	              <div>Pass</div>
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="group4" class="tab-panel panel-collapse collapse">
+	          <div class="panel-body">
+	            <div class="grade" id="grade-1">
+	              <div>1</div>
+	              <span class="card candidate" data-user-id="qt5a2o1n5d7b">舒崇福(68)</span>
+	              <span class="card candidate" data-user-id="w71913o6n5du">杨文虎(60)</span>
+	              <span class="card candidate female" data-user-id="e71913o6n5du">黎靖(69)</span>
+	              <span class="card candidate female" data-user-id="r71913o6n5du">彭吉燕(77)</span>
+	              <span class="card candidate" data-user-id="t71913o6n5du">苏冠旭(87)</span>
+	              <span class="card candidate" data-user-id="y71913o6n5du">王源铮(85)</span>
+	              <span class="card candidate" data-user-id="u71913o6n5du">潘泽(74)</span>
+	              <span class="card candidate female" data-user-id="i71913o6n5du">韦雅文(83)</span>
+	              <span class="card candidate" data-user-id="z71913o6n5du">谈大亨(68)</span>
+	              <span class="card candidate" data-user-id="x71913o6n5du">葛天平(66)</span>
+	              <span class="card candidate female" data-user-id="c71913o6n5du">莲蕊(90)</span>
+	            </div>
+	            <div class="grade" id="grade-2">
+	              <div>2</div>
+	            </div>
+	            <div class="grade" id="grade-3">
+	              <div>3</div>
+	            </div>
+	            <div class="grade" id="grade-pass">
+	              <div>Pass</div>
+	            </div>
+	          </div>
+	        </div>
+
+	        <div id="group5" class="tab-panel panel-collapse collapse">
+	          <div class="panel-body">
+	            <div class="grade" id="grade-1">
+	              <div>1</div>
+	              <span class="card candidate" data-user-id="vt5a2o1n5d7b">施方平(90)</span>
+	              <span class="card candidate female" data-user-id="8b1913o6n5du">高爱平(61)</span>
+	              <span class="card candidate" data-user-id="8n1913o6n5du">曲文迪(81)</span>
+	              <span class="card candidate" data-user-id="8m1913o6n5du">聂楷伦(74)</span>
+	              <span class="card candidate" data-user-id="8a1913o6n5du">高畅海(73)</span>
+	              <span class="card candidate" data-user-id="8s1913o6n5du">马明川(80)</span>
+	            </div>
+	            <div class="grade" id="grade-2">
+	              <div>2</div>
+	            </div>
+	            <div class="grade" id="grade-3">
+	              <div>3</div>
+	            </div>
+	            <div class="grade" id="grade-pass">
+	              <div>Pass</div>
+	            </div>
+	          </div>
+	        </div>
         </div>
       </div>
+
       <div class="panel-group col-md-5" id="rank-panel">
         <!-- overall rank -->
-        <div class="panel panel-default overall-rank">
+        <div class="panel panel-default overall-rank rank">
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#all-groups" href="#overall-rank">
