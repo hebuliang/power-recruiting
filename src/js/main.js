@@ -41,7 +41,7 @@ var ranking = (function ($) {
                 activeClass: 'ui-state-highlight',
                 drop: function(e, ui) {
                     if (this.id == ui.draggable.parent()[0].id)
-                        return false;
+                        return;
 
                     var user_id = ui.draggable.data('user-id');
                     var origin_candidate = $(this).find('span[data-user-id="' + user_id + '"]');
@@ -50,7 +50,7 @@ var ranking = (function ($) {
                         ui.draggable.remove();
                     } else {
                         var clone_node = ui.draggable.clone();
-                        if (ui.draggable.hasClass('reference')) {
+                        if ($(this).parents('#overall-rank').length == 0 || ui.draggable.hasClass('reference')) {
                             $(this).append(clone_node);
                             ui.draggable.remove();
                         } else {
